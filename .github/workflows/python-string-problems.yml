@@ -31,3 +31,9 @@ jobs:
       - name: Execute and Test Notebook
         run: |
           jupyter nbconvert --to notebook --execute "String Problems.ipynb" --output executed.ipynb --ExecutePreprocessor.timeout=300
+
+      - name: Upload executed notebook
+        uses: actions/upload-artifact@v4
+        with:
+          name: executed-notebook
+          path: executed.ipynb
