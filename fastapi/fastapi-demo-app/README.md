@@ -3,7 +3,6 @@
 This project is a simple FastAPI application that demonstrates various concepts, including basic endpoints and data handling for a to-do list.
 
 ## Project Structure
-
 ```
 fastapi-demo-app
 ├── src
@@ -11,9 +10,17 @@ fastapi-demo-app
 │   ├── models
 │   │   └── todo.py           # Pydantic model for to-do items
 │   ├── routes
-│   │   └── todo_routes.py     # Route definitions for to-do items
-│   └── types
-│       └── __init__.py       # Custom types or interfaces (currently empty)
+│   │   └── todo_routes.py    # Route definitions for to-do items
+│   ├── types
+│   │   └── __init__.py       # Custom types or interfaces
+│   ├── services
+│   │   └── todo_service.py   # Business logic for to-do items (optional)
+│   └── utils
+│       └── helpers.py        # Utility/helper functions (optional)
+├── tests
+│   ├── __init__.py
+│   └── test_main.py          # Unit tests for the application
+├── venv/                     # Virtual environment (should be in .gitignore)
 ├── requirements.txt          # Project dependencies
 └── README.md                 # Project documentation
 ```
